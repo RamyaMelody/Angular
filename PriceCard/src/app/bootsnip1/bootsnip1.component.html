@@ -1,0 +1,12 @@
+<div class="card mb-5 mb-lg-0" >
+    <div class="card-body">
+      <h5 class="card-title text-muted text-uppercase text-center">{{card.cardname}}</h5>
+      <h6 class="card-price text-center">${{card.price}}<span class="period">/month</span></h6>
+      <hr>
+      <ul class="fa-ul" >
+        <li *ngFor = "let option of card.options" [ngClass] = "{'setbold':option.isbold, 'text-muted':option.ismute}"><span class="fa-li"><i class="fa" [ngClass] = "{'fa-times':option.iscross, 'fa-check':option.ischeck}"></i></span>{{option.name}}</li>
+        
+      </ul>
+      <a href="#" class="btn btn-block btn-primary text-uppercase">Button</a>
+    </div>
+  </div>
